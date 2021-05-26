@@ -18,7 +18,8 @@ public class Movie {
     private String genre;
     private String premiere;
     private String director;
+    private String img;
 
-//    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    //    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 //    List<User> users;
 }

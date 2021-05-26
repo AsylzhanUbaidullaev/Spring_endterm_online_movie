@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie detail</title>
+</head>
+<body>
+<header th:insert="/fragments/header :: header"></header>
+<div class="container mt-5">
+    <h1>Movie</h1>
+    <div th:each="el : ${movie}" class="alert alert-info mt-2">
+        <img th:src="${el.img}" class="img">
+        <h3 th:text="${el.name}"></h3>
+        <p th:text="${el.premiere}"></p>
+        <p th:text="${el.genre}"></p>
+        <p th:text="${el.director}"></p>
+
+        <a th:href="'/movies/' + ${el.id} + '/edit'">Update</a>
+        <a th:href="'/movies/' + ${el.id} + '/remove'">Remove</a>
+    </div>
+</div>
+<footer th:insert="/fragments/footer :: footer"></footer>
+</body>
+</html>
